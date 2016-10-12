@@ -76004,7 +76004,7 @@ var HomePage = (function () {
     }
     HomePage = __decorate$108([
         Component({
-            selector: 'page-home', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Welcome to Behrens Landscaping!</h2>\n  <p>\n    This starter project comes with simple tabs-based layout for apps\n    that are going to primarily use a Tabbed UI.\n  </p>\n  <p>\n    Take a look at the <code>src/pages/</code> directory to add or change tabs,\n    update any existing page or create new pages.\n  </p>\n</ion-content>\n'
+            selector: 'page-home', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <img src="assets/img/logo_final.jpg">\n  <p>\n\n  </p>\n</ion-content>\n'
         }), 
         __metadata$3('design:paramtypes', [(typeof (_a = typeof NavController !== 'undefined' && NavController) === 'function' && _a) || Object])
     ], HomePage);
