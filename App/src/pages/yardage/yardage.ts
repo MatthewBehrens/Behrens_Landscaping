@@ -12,4 +12,8 @@ export class YardagePage {
 
   }
 
+  calculateYards(length, width, depth) {
+  	
+  }
+
 }

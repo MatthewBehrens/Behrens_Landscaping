@@ -76004,7 +76004,7 @@ var HomePage = (function () {
     }
     HomePage = __decorate$108([
         Component({
-            selector: 'page-home', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <img src="assets/img/logo_final.jpg">\n  <br>\n  <div>\n	  <iframe \n	  	width="350" height="350" frameborder="1" style="border:0"\n			src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLRiZEXKjD4gR12JO1OBqlNw&key=AIzaSyAYjMFpuw2CLi1lKRZV3xwKBH310tLHERA" allowfullscreen>\n		</iframe>\n	</div>\n\n</ion-content>\n'
+            selector: 'page-home', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="center">\n  <img src="assets/img/logo_final.jpg" height="125" width="250">\n  <br>\n  <p> Phone: (847)358-4010 </p>\n  <div>\n	  <iframe \n	  	width="300" height="250" frameborder="1" style="border:0"\n			src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLRiZEXKjD4gR12JO1OBqlNw&key=AIzaSyAYjMFpuw2CLi1lKRZV3xwKBH310tLHERA" allowfullscreen>\n		</iframe>\n	</div>\n\n</ion-content>\n'
         }), 
         __metadata$3('design:paramtypes', [(typeof (_a = typeof NavController !== 'undefined' && NavController) === 'function' && _a) || Object])
     ], HomePage);
@@ -76026,9 +76026,11 @@ var YardagePage = (function () {
     function YardagePage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    YardagePage.prototype.calculateYards = function (length, width, depth) {
+    };
     YardagePage = __decorate$110([
         Component({
-            selector: 'page-yardage', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Yardage Calculator\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n	<ion-list>\n\n	  <ion-item>\n	    <ion-label stacked>Length in feet</ion-label>\n	    <ion-input type="text"></ion-input>\n	  </ion-item>\n\n	  <ion-item>\n	    <ion-label stacked>Width in feet</ion-label>\n	    <ion-input type="text"></ion-input>\n	  </ion-item>\n\n	  <ion-item>\n	    <ion-label stacked>Depth in inches</ion-label>\n	    <ion-input type="text"></ion-input>\n	  </ion-item>\n\n	</ion-list>\n\n  <div padding>\n    <button ion-button color="primary" block>Calculate</button>\n  </div>\n\n</ion-content>\n'
+            selector: 'page-yardage', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>\n      Yardage Calculator\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n	<ion-list>\n		<form #myForm=\'ngForm\' (ngSubmit)="onSubmit(myForm)" >\n\n		  <ion-item>\n		    <ion-label stacked>Length in feet</ion-label>\n		    <ion-input type="text"></ion-input>\n		  </ion-item>\n\n		  <ion-item>\n		    <ion-label stacked>Width in feet</ion-label>\n		    <ion-input type="text"></ion-input>\n		  </ion-item>\n\n		  <ion-item>\n		    <ion-label stacked>Depth in inches</ion-label>\n		    <ion-input type="text"></ion-input>\n		  </ion-item>\n\n		</form>\n	</ion-list>\n\n  <div padding>\n    <button ion-button color="primary" block (click)="calculateYards()"> Calculate </button>\n  </div>\n\n</ion-content>\n'
         }), 
         __metadata$5('design:paramtypes', [(typeof (_a = typeof NavController !== 'undefined' && NavController) === 'function' && _a) || Object])
     ], YardagePage);
@@ -76052,7 +76054,7 @@ var PriceListPage = (function () {
     }
     PriceListPage = __decorate$111([
         Component({
-            selector: 'page-price_list', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Price List\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n    <a ion-item detail-push>\n      Bark Mulches\n    </a>\n\n    <a ion-item detail-push>\n      Organics\n    </a>\n\n    <a ion-item detail-push>\n      Fertilizers\n    </a>\n\n    <a ion-item detail-push>\n      Stone\n    </a>\n\n    <a ion-item detail-push>\n      Timbers and Supplies\n    </a>\n\n    <a ion-item detail-push>\n      Grass Seed and Supplies\n    </a>\n\n    <a ion-item detail-push>\n      Drainage Products\n    </a>\n\n    <a ion-item detail-push>\n      Landscape Fabric, Edging, and Supplies\n    </a>\n\n    <a ion-item detail-push>\n      Decorative Stone\n    </a>\n\n  </ion-list>\n</ion-content>\n'
+            selector: 'page-price_list', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>\n      Price List\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n    <a ion-item detail-push>\n      Bark Mulches\n    </a>\n\n    <a ion-item detail-push>\n      Organics\n    </a>\n\n    <a ion-item detail-push>\n      Fertilizers\n    </a>\n\n    <a ion-item detail-push>\n      Stone\n    </a>\n\n    <a ion-item detail-push>\n      Timbers and Supplies\n    </a>\n\n    <a ion-item detail-push>\n      Grass Seed and Supplies\n    </a>\n\n    <a ion-item detail-push>\n      Drainage Products\n    </a>\n\n    <a ion-item detail-push>\n      Landscape Fabric, Edging, and Supplies\n    </a>\n\n    <a ion-item detail-push>\n      Decorative Stone\n    </a>\n\n  </ion-list>\n</ion-content>\n'
         }), 
         __metadata$6('design:paramtypes', [(typeof (_a = typeof NavController !== 'undefined' && NavController) === 'function' && _a) || Object])
     ], PriceListPage);
@@ -76079,7 +76081,7 @@ var TabsPage = (function () {
         this.tab3Root = PriceListPage;
     }
     TabsPage = __decorate$107([
-        Component({ template: /* ion-inline-template */ '<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Yardage Calculator" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Price List" tabIcon="cash"></ion-tab>\n</ion-tabs>\n'
+        Component({ template: /* ion-inline-template */ '<ion-tabs color="newcolor">\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Yardage Calculator" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Price List" tabIcon="cash"></ion-tab>\n</ion-tabs>\n'
         }), 
         __metadata$2('design:paramtypes', [])
     ], TabsPage);
