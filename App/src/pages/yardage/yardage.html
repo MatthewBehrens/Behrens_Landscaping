@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="newcolor">
+    <ion-title>
+      Yardage Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-list>
+		<form #myForm='ngForm' (ngSubmit)="onSubmit(myForm)" >
+
+		  <ion-item>
+		    <ion-label stacked>Length in feet</ion-label>
+		    <ion-input type="text"></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-label stacked>Width in feet</ion-label>
+		    <ion-input type="text"></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-label stacked>Depth in inches</ion-label>
+		    <ion-input type="text"></ion-input>
+		  </ion-item>
+
+		</form>
+	</ion-list>
+
+  <div padding>
+    <button ion-button color="primary" block (click)="calculateYards()"> Calculate </button>
+  </div>
+
+</ion-content>
