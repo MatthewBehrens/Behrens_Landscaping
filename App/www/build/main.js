@@ -76002,9 +76002,12 @@ var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
     }
+    HomePage.prototype.callIT = function (passedNumber) {
+        window.location = passedNumber;
+    };
     HomePage = __decorate$108([
         Component({
-            selector: 'page-home', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="center">\n  <img src="assets/img/logo_final.jpg" height="125" width="250">\n  <br>\n  <p> Phone: (847)358-4010 </p>\n  <div>\n	  <iframe \n	  	width="300" height="300" frameborder="1" style="border:0"\n			src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLRiZEXKjD4gR12JO1OBqlNw&key=AIzaSyAYjMFpuw2CLi1lKRZV3xwKBH310tLHERA" allowfullscreen>\n		</iframe>\n	</div>\n\n</ion-content>\n'
+            selector: 'page-home', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="center">\n  <img src="assets/img/logo_final.jpg" height="125" width="250">\n  <br>\n  <div>\n    <button ion-button (click)="callIT(\'tel:+1-847-358-4010\')">Call Us! (847)358-4010</button>\n  </div>\n  <br>\n  <div>\n	  <iframe \n	  	width="300" height="300" frameborder="1" style="border:0"\n			src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLRiZEXKjD4gR12JO1OBqlNw&key=AIzaSyAYjMFpuw2CLi1lKRZV3xwKBH310tLHERA" allowfullscreen>\n		</iframe>\n	</div>\n\n</ion-content>\n'
         }), 
         __metadata$3('design:paramtypes', [(typeof (_a = typeof NavController !== 'undefined' && NavController) === 'function' && _a) || Object])
     ], HomePage);
