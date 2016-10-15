@@ -17,28 +17,29 @@
 		<p> 3-4 inches for new beds </p>
 	</div>
 
-	<ion-list >
-		<form #myForm='ngForm' (ngSubmit)="onSubmit(myForm)">
-		  <ion-item>
-		    <ion-label stacked>Length in feet</ion-label>
-		    <ion-input type="number" [(ngModel)]="length" name="length"></ion-input>
-		  </ion-item>
+		<ion-list>
+			<form #myForm='ngForm' (ngSubmit)="onSubmit(myForm)">
+			  <ion-item>
+			    <ion-label stacked>Length in feet</ion-label>
+			    <ion-input type="number" [(ngModel)]="length" name="length"></ion-input>
+			  </ion-item>
 
-		  <ion-item>
-		    <ion-label stacked>Width in feet</ion-label>
-		    <ion-input type="number" [(ngModel)]="width" name="width"></ion-input>
-		  </ion-item>
+			  <ion-item>
+			    <ion-label stacked>Width in feet</ion-label>
+			    <ion-input type="number" [(ngModel)]="width" name="width"></ion-input>
+			  </ion-item>
 
-		  <ion-item>
-		    <ion-label stacked>Depth in inches</ion-label>
-		    <ion-input type="number" [(ngModel)]="depth" name="depth"></ion-input>
-		  </ion-item>
-		  <br>
-		  <button ion-button type="submit" block>Calculate</button>
-		</form>
-	</ion-list>
+			  <ion-item>
+			    <ion-label stacked>Depth in inches</ion-label>
+			    <ion-input type="number" [(ngModel)]="depth" name="depth"></ion-input>
+			  </ion-item>
+			  <br>
+			  <button ion-button type="submit" block>Calculate</button>
+			</form>
+		</ion-list>
+
 	<h4 class="center" *ngIf="yards > 0">
-		you need {{yards}} yards
+		You need {{yards}} yards
 	</h4>
 
 </ion-content>

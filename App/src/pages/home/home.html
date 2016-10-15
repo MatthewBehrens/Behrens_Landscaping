@@ -7,7 +7,10 @@
 <ion-content padding class="center">
   <img src="assets/img/logo_final.jpg" height="125" width="250">
   <br>
-  <p> Phone: (847)358-4010 </p>
+  <div>
+    <button ion-button (click)="callIT('tel:+1-847-358-4010')">Call Us! (847)358-4010</button>
+  </div>
+  <br>
   <div>
 	  <iframe 
 	  	width="300" height="300" frameborder="1" style="border:0"
