@@ -29,6 +29,6 @@ export class YardagePage {
     let yards = (cubicFeet/27)
     console.log(yards);
 
-    this.yards = Math.round(yards)
+    this.yards = (Math.round(yards * 2) / 2).toFixed(1)
   }
 }
