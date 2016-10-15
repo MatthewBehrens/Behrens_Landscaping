@@ -76004,7 +76004,7 @@ var HomePage = (function () {
     }
     HomePage = __decorate$108([
         Component({
-            selector: 'page-home', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="center">\n  <img src="assets/img/logo_final.jpg" height="125" width="250">\n  <br>\n  <p> Phone: (847)358-4010 </p>\n  <div>\n	  <iframe \n	  	width="300" height="250" frameborder="1" style="border:0"\n			src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLRiZEXKjD4gR12JO1OBqlNw&key=AIzaSyAYjMFpuw2CLi1lKRZV3xwKBH310tLHERA" allowfullscreen>\n		</iframe>\n	</div>\n\n</ion-content>\n'
+            selector: 'page-home', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="center">\n  <img src="assets/img/logo_final.jpg" height="125" width="250">\n  <br>\n  <p> Phone: (847)358-4010 </p>\n  <div>\n	  <iframe \n	  	width="300" height="300" frameborder="1" style="border:0"\n			src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLRiZEXKjD4gR12JO1OBqlNw&key=AIzaSyAYjMFpuw2CLi1lKRZV3xwKBH310tLHERA" allowfullscreen>\n		</iframe>\n	</div>\n\n</ion-content>\n'
         }), 
         __metadata$3('design:paramtypes', [(typeof (_a = typeof NavController !== 'undefined' && NavController) === 'function' && _a) || Object])
     ], HomePage);
@@ -76023,19 +76023,33 @@ var __metadata$5 = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var YardagePage = (function () {
-    function YardagePage(navCtrl) {
+    function YardagePage(navCtrl, builder) {
         this.navCtrl = navCtrl;
+        this.builder = builder;
     }
-    YardagePage.prototype.calculateYards = function (length, width, depth) {
+    YardagePage.prototype.onSubmit = function (formData) {
+        console.log('Form data is ', formData.value);
+        this.myData = formData.value;
+        var length = this.myData.length;
+        var width = this.myData.width;
+        var depth = this.myData.depth;
+        console.log(length);
+        console.log(width);
+        console.log(depth);
+        var cubicFeet = length * width * (depth / 12);
+        console.log(cubicFeet);
+        var yards = (cubicFeet / 27);
+        console.log(yards);
+        this.yards = Math.round(yards);
     };
     YardagePage = __decorate$110([
         Component({
-            selector: 'page-yardage', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>\n      Yardage Calculator\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n	<ion-list>\n		<form #myForm=\'ngForm\' (ngSubmit)="onSubmit(myForm)" >\n\n		  <ion-item>\n		    <ion-label stacked>Length in feet</ion-label>\n		    <ion-input type="text"></ion-input>\n		  </ion-item>\n\n		  <ion-item>\n		    <ion-label stacked>Width in feet</ion-label>\n		    <ion-input type="text"></ion-input>\n		  </ion-item>\n\n		  <ion-item>\n		    <ion-label stacked>Depth in inches</ion-label>\n		    <ion-input type="text"></ion-input>\n		  </ion-item>\n\n		</form>\n	</ion-list>\n\n  <div padding>\n    <button ion-button color="primary" block (click)="calculateYards()"> Calculate </button>\n  </div>\n\n</ion-content>\n'
+            selector: 'page-yardage', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>\n      Yardage Calculator\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n	<div class="center">\n		<h3> General Guidelines </h3>\n		<p> 1 Yard = 27 cubic feet (3′ x 3′ x 3′) </p>\n		<p> 1 Yard = 10 ft x 10 ft area (100 sq. ft.) approximately 3” deep </p>\n		<h3> Recommended Depth </h3>\n		<p> 1-2 inches for re-mulching </p>\n		<p> 3-4 inches for new beds </p>\n	</div>\n\n	<ion-list >\n		<form #myForm=\'ngForm\' (ngSubmit)="onSubmit(myForm)">\n		  <ion-item>\n		    <ion-label stacked>Length in feet</ion-label>\n		    <ion-input type="number" [(ngModel)]="length" name="length"></ion-input>\n		  </ion-item>\n\n		  <ion-item>\n		    <ion-label stacked>Width in feet</ion-label>\n		    <ion-input type="number" [(ngModel)]="width" name="width"></ion-input>\n		  </ion-item>\n\n		  <ion-item>\n		    <ion-label stacked>Depth in inches</ion-label>\n		    <ion-input type="number" [(ngModel)]="depth" name="depth"></ion-input>\n		  </ion-item>\n		  <br>\n		  <button ion-button type="submit" block>Calculate</button>\n		</form>\n	</ion-list>\n	<h4 class="center" *ngIf="yards > 0">\n		you need {{yards}} yards\n	</h4>\n\n</ion-content>\n'
         }), 
-        __metadata$5('design:paramtypes', [(typeof (_a = typeof NavController !== 'undefined' && NavController) === 'function' && _a) || Object])
+        __metadata$5('design:paramtypes', [(typeof (_a = typeof NavController !== 'undefined' && NavController) === 'function' && _a) || Object, (typeof (_b = typeof FormBuilder !== 'undefined' && FormBuilder) === 'function' && _b) || Object])
     ], YardagePage);
     return YardagePage;
-    var _a;
+    var _a, _b;
 }());
 
 /* ion-compiler */
