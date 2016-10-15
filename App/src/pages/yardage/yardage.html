@@ -8,29 +8,37 @@
 
 <ion-content padding>
 
-	<ion-list>
-		<form #myForm='ngForm' (ngSubmit)="onSubmit(myForm)" >
+	<div class="center">
+		<h3> General Guidelines </h3>
+		<p> 1 Yard = 27 cubic feet (3′ x 3′ x 3′) </p>
+		<p> 1 Yard = 10 ft x 10 ft area (100 sq. ft.) approximately 3” deep </p>
+		<h3> Recommended Depth </h3>
+		<p> 1-2 inches for re-mulching </p>
+		<p> 3-4 inches for new beds </p>
+	</div>
 
+	<ion-list >
+		<form #myForm='ngForm' (ngSubmit)="onSubmit(myForm)">
 		  <ion-item>
 		    <ion-label stacked>Length in feet</ion-label>
-		    <ion-input type="text"></ion-input>
+		    <ion-input type="number" [(ngModel)]="length" name="length"></ion-input>
 		  </ion-item>
 
 		  <ion-item>
 		    <ion-label stacked>Width in feet</ion-label>
-		    <ion-input type="text"></ion-input>
+		    <ion-input type="number" [(ngModel)]="width" name="width"></ion-input>
 		  </ion-item>
 
 		  <ion-item>
 		    <ion-label stacked>Depth in inches</ion-label>
-		    <ion-input type="text"></ion-input>
+		    <ion-input type="number" [(ngModel)]="depth" name="depth"></ion-input>
 		  </ion-item>
-
+		  <br>
+		  <button ion-button type="submit" block>Calculate</button>
 		</form>
 	</ion-list>
-
-  <div padding>
-    <button ion-button color="primary" block (click)="calculateYards()"> Calculate </button>
-  </div>
+	<h4 class="center" *ngIf="yards > 0">
+		you need {{yards}} yards
+	</h4>
 
 </ion-content>
