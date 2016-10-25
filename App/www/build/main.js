@@ -76007,7 +76007,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate$108([
         Component({
-            selector: 'page-home', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="center">\n  <img src="assets/img/logo_final.jpg" height="125" width="250">\n  <br>\n  <div>\n    <button ion-button (click)="callIT(\'tel:+1-847-358-4010\')">Call Us! (847)358-4010</button>\n  </div>\n  <br>\n  <div>\n	  <iframe \n	  	width="300" height="300" frameborder="1" style="border:0"\n			src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLRiZEXKjD4gR12JO1OBqlNw&key=AIzaSyAYjMFpuw2CLi1lKRZV3xwKBH310tLHERA" allowfullscreen>\n		</iframe>\n	</div>\n\n</ion-content>\n'
+            selector: 'page-home', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="center">\n  <img src="assets/img/logo_final.jpg" height="125" width="250">\n  <br>\n  <div>\n    <button ion-button (click)="callIT(\'tel:+1-847-358-4010\')">Call Us! (847)358-4010</button>\n  </div>\n  <br>\n  <div>\n	  <iframe \n	  	width="350" height="350" frameborder="1" style="border:0"\n			src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLRiZEXKjD4gR12JO1OBqlNw&key=AIzaSyAYjMFpuw2CLi1lKRZV3xwKBH310tLHERA" allowfullscreen>\n		</iframe>\n	</div>\n\n</ion-content>\n'
         }), 
         __metadata$3('design:paramtypes', [(typeof (_a = typeof NavController !== 'undefined' && NavController) === 'function' && _a) || Object])
     ], HomePage);
@@ -76049,6 +76049,35 @@ var YardagePage = (function () {
 }());
 
 /* ion-compiler */
+var __decorate$112 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata$7 = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var PriceListDetailPage = (function () {
+    function PriceListDetailPage(navCtrl, params) {
+        this.navCtrl = navCtrl;
+        this.params = params;
+        this.item = params.get("item");
+    }
+    PriceListDetailPage.prototype.ionViewDidLoad = function () {
+        console.log('Hello PriceListDetail Page');
+    };
+    PriceListDetailPage = __decorate$112([
+        Component({
+            selector: 'page-price-list-detail', template: /* ion-inline-template */ '<!--\n  Generated template for the PriceListDetail page.\n\n  See http://ionicframework.com/docs/v2/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="newcolor">\n    <ion-title>{{item.title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n	<ion-list>\n		<ion-item *ngFor="let product of item.products"> {{product.name}}, {{product.price}} </ion-item>\n	</ion-list>\n</ion-content>\n'
+        }), 
+        __metadata$7('design:paramtypes', [(typeof (_a = typeof NavController !== 'undefined' && NavController) === 'function' && _a) || Object, (typeof (_b = typeof NavParams !== 'undefined' && NavParams) === 'function' && _b) || Object])
+    ], PriceListDetailPage);
+    return PriceListDetailPage;
+    var _a, _b;
+}());
+
+/* ion-compiler */
 var __decorate$111 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -76061,10 +76090,114 @@ var __metadata$6 = (undefined && undefined.__metadata) || function (k, v) {
 var PriceListPage = (function () {
     function PriceListPage(navCtrl) {
         this.navCtrl = navCtrl;
+        this.items = [
+            {
+                title: 'Bark Mulches',
+                products: [
+                    {
+                        name: 'Southern Bark Mulch',
+                        price: '$45.00 Yard'
+                    },
+                    {
+                        name: 'Premium Hardwood Mulch',
+                        price: '$37.50 Yard'
+                    },
+                    {
+                        name: 'Behrens Hardwood Mulch',
+                        price: '$27.25 Yard'
+                    },
+                    {
+                        name: 'Eco Mulch',
+                        price: '$17.95 Yard'
+                    },
+                    {
+                        name: 'Cedar Mulch',
+                        price: '$49.95 Yard'
+                    },
+                    {
+                        name: 'Dyed Black Mulch',
+                        price: '$29.95 Yard'
+                    },
+                    {
+                        name: 'Dyed Red Mulch',
+                        price: '$29.95 Yard'
+                    },
+                    {
+                        name: 'Dyed Brown Mulch',
+                        price: '$29.95 Yard'
+                    },
+                    {
+                        name: 'Play Mulch',
+                        price: '$29.00 Yard'
+                    },
+                    {
+                        name: 'Arbor Chips',
+                        price: '$9.00 Yard'
+                    }
+                ]
+            },
+            {
+                title: 'Organics',
+                products: [
+                    {}
+                ]
+            },
+            {
+                title: 'Fertilizers',
+                products: [
+                    {}
+                ]
+            },
+            {
+                title: 'Stone',
+                products: [
+                    {}
+                ]
+            },
+            {
+                title: 'Timbers and Supplies',
+                products: [
+                    {}
+                ]
+            },
+            {
+                title: 'Grass Seed and Supplies',
+                products: [
+                    {}
+                ]
+            },
+            {
+                title: 'Drainage Products',
+                products: [
+                    {}
+                ]
+            },
+            {
+                title: 'Landscape Fabric, Edging, and Supplies',
+                products: [
+                    {}
+                ]
+            },
+            {
+                title: 'Decorative Stone',
+                products: [
+                    {}
+                ]
+            },
+            {
+                title: 'Salt',
+                products: [
+                    {}
+                ]
+            }
+        ];
     }
+    PriceListPage.prototype.goToDetails = function (num) {
+        this.navCtrl.push(PriceListDetailPage, { item: this.items[num] });
+    };
     PriceListPage = __decorate$111([
         Component({
-            selector: 'page-price_list', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>\n      Price List\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n    <a ion-item detail-push>\n      Bark Mulches\n    </a>\n\n    <a ion-item detail-push>\n      Organics\n    </a>\n\n    <a ion-item detail-push>\n      Fertilizers\n    </a>\n\n    <a ion-item detail-push>\n      Stone\n    </a>\n\n    <a ion-item detail-push>\n      Timbers and Supplies\n    </a>\n\n    <a ion-item detail-push>\n      Grass Seed and Supplies\n    </a>\n\n    <a ion-item detail-push>\n      Drainage Products\n    </a>\n\n    <a ion-item detail-push>\n      Landscape Fabric, Edging, and Supplies\n    </a>\n\n    <a ion-item detail-push>\n      Decorative Stone\n    </a>\n\n  </ion-list>\n</ion-content>\n'
+            selector: 'page-price_list', template: /* ion-inline-template */ '<ion-header>\n  <ion-navbar color="newcolor">\n    <ion-title>\n      Price List\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n    <button (click)="goToDetails(0)" ion-item>\n      Bark Mulches\n    </button>\n\n    <button (click)="goToDetails(1)" ion-item>\n      Organics\n    </button>\n\n    <button (click)="goToDetails(2)" ion-item>\n      Fertilizers\n    </button>\n\n    <button (click)="goToDetails(3)" ion-item>\n      Stone\n    </button>\n\n    <button (click)="goToDetails(4)" ion-item>\n      Timbers and Supplies\n    </button>\n\n    <button (click)="goToDetails(5)" ion-item>\n      Grass Seed and Supplies\n    </button>\n\n    <button (click)="goToDetails(6)" ion-item>\n      Drainage Products\n    </button>\n\n    <button (click)="goToDetails(7)" ion-item>\n      Landscape Fabric, Edging, and Supplies\n    </button>\n\n    <button (click)="goToDetails(8)" ion-item>\n      Decorative Stone\n    </button>\n\n    <button (click)="goToDetails(9)" ion-item>\n      Salt\n    </button>\n\n  </ion-list>\n</ion-content>\n'
         }), 
         __metadata$6('design:paramtypes', [(typeof (_a = typeof NavController !== 'undefined' && NavController) === 'function' && _a) || Object])
     ], PriceListPage);
@@ -76147,7 +76280,8 @@ var AppModule = (function () {
                 YardagePage,
                 PriceListPage,
                 HomePage,
-                TabsPage
+                TabsPage,
+                PriceListDetailPage
             ],
             imports: [
                 IonicModule.forRoot(MyApp)
@@ -76158,7 +76292,8 @@ var AppModule = (function () {
                 YardagePage,
                 PriceListPage,
                 HomePage,
-                TabsPage
+                TabsPage,
+                PriceListDetailPage
             ],
             providers: []
         }), 
